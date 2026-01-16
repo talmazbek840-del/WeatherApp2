@@ -32,6 +32,7 @@ private val DarkColorScheme = darkColorScheme(
     surfaceVariant = DarkCardBackground,
     onSurfaceVariant = DarkTextSecondary
 )
+
 @Composable
 fun WeatherAppTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),

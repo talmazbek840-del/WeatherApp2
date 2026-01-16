@@ -1,4 +1,5 @@
 package temirlan.com.weatherapp.data
+
 import retrofit2.http.GET
 import retrofit2.http.Query
 

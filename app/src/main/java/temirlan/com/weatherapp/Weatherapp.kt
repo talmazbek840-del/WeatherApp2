@@ -9,7 +9,7 @@ import temirlan.com.weatherapp.di.repositoryModule
 import temirlan.com.weatherapp.di.useCaseModule
 import temirlan.com.weatherapp.di.viewModelModule
 
-class WeatherApp: Application() {
+class WeatherApp : Application() {
     override fun onCreate() {
         super.onCreate()
         startKoin {

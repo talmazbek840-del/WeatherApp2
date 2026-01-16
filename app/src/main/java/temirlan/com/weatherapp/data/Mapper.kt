@@ -2,6 +2,7 @@ package temirlan.com.weatherapp.data
 
 import temirlan.com.weatherapp.domain.model.CurrentWeather
 import temirlan.com.weatherapp.domain.model.ForecastDailyWeather
+
 class WeatherMapper {
     fun mapToCurrentWeather(dto: CurrentWeatherResponseDto): CurrentWeather {
         val current = dto.currentDto
@@ -11,7 +12,7 @@ class WeatherMapper {
             humidity = current.humidity.toDouble(),
             windSpeed = current.windKph,
             feelsLike = current.feelsLikeC,
-            iconUrl =  current.condition?.icon
+            iconUrl = current.condition?.icon
                 ?.let { "https:$it" }
                 ?: "",
             location = dto.locationDto?.name ?: ""
@@ -23,7 +24,7 @@ class WeatherMapper {
             ForecastDailyWeather(
                 minTemp = dto.day.minTempC,
                 maxTemp = dto.day.maxTempC,
-                date = dto.date.substring(5,10).replace("-",".")
+                date = dto.date.substring(5, 10).replace("-", ".")
             )
         }
     }

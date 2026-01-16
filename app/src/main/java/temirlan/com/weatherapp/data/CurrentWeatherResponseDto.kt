@@ -2,16 +2,18 @@ package temirlan.com.weatherapp.data
 
 import com.google.gson.annotations.SerializedName
 
-data class CurrentWeatherResponseDto (
+data class CurrentWeatherResponseDto(
     @SerializedName("current")
     val currentDto: CurrentDto,
     @SerializedName("location")
     val locationDto: LocationDto?
 )
-data class LocationDto (
+
+data class LocationDto(
     @SerializedName("region")
     val name: String
-    )
+)
+
 data class CurrentDto(
     @SerializedName("temp_c")
     val tempC: Double,
@@ -22,7 +24,8 @@ data class CurrentDto(
     @SerializedName("feelslike_c")
     val feelsLikeC: Double,
 )
-data class Condition (
+
+data class Condition(
     val text: String?,
     val icon: String?
 )
